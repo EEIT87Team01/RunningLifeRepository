@@ -1,4 +1,10 @@
 /build/
+<<<<<<< HEAD
+/.project
+/.classpath
+/.settings/
+=======
 /.settings/
 /.classpath
 /.project
+>>>>>>> branch 'master' of https://github.com/EEIT87Team01/RunningLifeRepository.git
