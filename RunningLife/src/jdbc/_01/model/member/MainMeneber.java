@@ -1,0 +1,46 @@
+package jdbc._01.model.member;
+
+import java.io.File;
+//import java.io.FileInputStream;
+//import java.io.FileNotFoundException;
+//import java.io.InputStream;
+
+public class MainMeneber {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+//		MemberDAOJDBC dao = new MemberDAOJDBC();
+		MemberDAOJNDI dao = new MemberDAOJNDI();
+		
+		String photoName = "chngstar.gif";
+		File photo = new File("E:\\EEIT87-1P\\FinalProject\\images",photoName);
+		
+		MemberBean memberVO = new MemberBean();
+		memberVO.setMemberID("665922CD-6039-4D69-B963-DC1B7B62EC99");
+		memberVO.setFirstName("Wang");
+		memberVO.setLastName("Jack");
+		memberVO.setNickname("KO");
+		memberVO.setEmail("jack123@gmail.com");
+		memberVO.setGender("1");
+		memberVO.setBirthday("2016-08-16");
+		memberVO.setCountryID("111");
+		memberVO.setCityID("222");
+		memberVO.setLocationID("321");
+		memberVO.setAddress("日本北海道札幌市");
+		memberVO.setHeight(123.0);
+		memberVO.setWeight(123.0);
+		memberVO.setPhone("0933987987");
+		memberVO.setPhoto(photo);
+		memberVO.setCompetenceID(11);
+		memberVO.setIdentityID("A123456789");
+		memberVO.setEmergencyContact("God");
+		memberVO.setEmergencyPhone("0987987987");
+		memberVO.setEmergencyRelation(1);
+		memberVO.setCreateDate("2016-08-16");
+		memberVO.setLastOnlineDateTime("2016-08-09 12:20:00.000");
+				
+		dao.insert(memberVO);
+		System.out.println("GG");
+	}
+
+}

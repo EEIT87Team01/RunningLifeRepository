@@ -1,32 +1,27 @@
 package jdbc._05.model;
 
-public class GroupVO {
+public class TeamVO {
 	private int eventID;
-	private int groupID;
-	private String groupName;
+	private int teamID;
+	private String teamName;
 	private float distance;
-	
-	public GroupVO() {
-		super();
-	}
-
 	public int getEventID() {
 		return eventID;
 	}
 	public void setEventID(int eventID) {
 		this.eventID = eventID;
 	}
-	public int getGroupID() {
-		return groupID;
+	public int getTeamID() {
+		return teamID;
 	}
-	public void setGroupID(int groupID) {
-		this.groupID = groupID;
+	public void setTeamID(int teamID) {
+		this.teamID = teamID;
 	}
-	public String getGroupName() {
-		return groupName;
+	public String getTeamName() {
+		return teamName;
 	}
-	public void setGroupName(String groupName) {
-		this.groupName = groupName;
+	public void setTeamName(String teamName) {
+		this.teamName = teamName;
 	}
 	public float getDistance() {
 		return distance;
@@ -35,13 +30,15 @@ public class GroupVO {
 		this.distance = distance;
 	}
 	
+	
+	
 }
 //CREATE TABLE [group] (
 //		  [eventID] int ,
-//		  [groupID] int IDENTITY(1,1),
+//		  [teamID] int IDENTITY(1,1),
 //		  [groupName] varchar(20),
 //		  [distance] float,
-//		  PRIMARY KEY ([groupID],[eventID]),
+//		  PRIMARY KEY ([teamID],[eventID]),
 //		  FOREIGN KEY ([eventID]) REFERENCES [event]([eventID]) 
 //
 //		);

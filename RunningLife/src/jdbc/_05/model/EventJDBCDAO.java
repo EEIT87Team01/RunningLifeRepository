@@ -84,6 +84,7 @@ public class EventJDBCDAO implements IEventJDBCDAO {
 			pstmt.setInt(1, eventID);
 			ResultSet rs = pstmt.executeQuery();
 			while(rs.next()){
+				event.setEventID(rs.getInt("eventID"));
 				event.setLocationID(rs.getString("locationID"));
 				event.setName(rs.getString("name"));
 				event.setTime(rs.getTimestamp("time"));
