@@ -4,7 +4,7 @@ import java.sql.Timestamp;
 
 public class RacerVO {
 	private int eventID;
-	private int groupID;
+	private int teamID;
 	private String memberID;
 	private String clothes;
 	private Timestamp score;
@@ -21,27 +21,34 @@ public class RacerVO {
 		this.eventID = eventID;
 	}
 
-	public int getGroupID() {
-		return groupID;
+	public int getTeamID() {
+		return teamID;
 	}
-	public void setGroupID(int groupID) {
-		this.groupID = groupID;
+
+	public void setTeamID(int teamID) {
+		this.teamID = teamID;
 	}
+
 	public String getMemberID() {
 		return memberID;
 	}
+
 	public void setMemberID(String memberID) {
 		this.memberID = memberID;
 	}
+
 	public String getClothes() {
 		return clothes;
 	}
+
 	public void setClothes(String clothes) {
 		this.clothes = clothes;
 	}
+
 	public Timestamp getScore() {
 		return score;
 	}
+
 	public void setScore(Timestamp score) {
 		this.score = score;
 	}
