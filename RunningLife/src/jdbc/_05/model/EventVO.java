@@ -71,6 +71,8 @@ public class EventVO {
 		this.eventPhotoPath = eventPhotoPath;
 	}
 	
+
+	
 }
 //CREATE TABLE [event] (
 //		  [eventID] INT IDENTITY(1,1) ,
