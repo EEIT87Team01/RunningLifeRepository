@@ -2,6 +2,8 @@ package jdbc._01.model.member;
 
 import java.io.File;
 
+import jdbc._01.model.emergencyRelation.EmergencyRelationBean;
+
 public class MemberBean {
 	private String memberID;
 	private String firstName;
@@ -22,7 +24,7 @@ public class MemberBean {
 	private String identityID;
 	private String emergencyContact;
 	private String emergencyPhone;
-	private int emergencyRelation;
+	private EmergencyRelationBean emergencyRelation;
 	private String createDate;
 	private String lastOnlineDateTime;
 
@@ -33,7 +35,7 @@ public class MemberBean {
 	public MemberBean(String memberID, String firstName, String lastName, String nickname, String email, String gender,
 			String birthday, String countryID, String cityID, String locationID, String address, Double height,
 			Double weight, String phone, File photo, int competenceID, String identityID, String emergencyContact,
-			String emergencyPhone, int emergencyRelation, String createDate, String lastOnlineDateTime) {
+			String emergencyPhone, EmergencyRelationBean emergencyRelation, String createDate, String lastOnlineDateTime) {
 		super();
 		this.memberID = memberID;
 		this.firstName = firstName;
@@ -211,11 +213,11 @@ public class MemberBean {
 		this.emergencyPhone = emergencyPhone;
 	}
 
-	public int getEmergencyRelation() {
+	public EmergencyRelationBean getEmergencyRelation() {
 		return emergencyRelation;
 	}
 
-	public void setEmergencyRelation(int emergencyRelation) {
+	public void setEmergencyRelation(EmergencyRelationBean emergencyRelation) {
 		this.emergencyRelation = emergencyRelation;
 	}
 

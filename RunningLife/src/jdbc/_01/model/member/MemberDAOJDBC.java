@@ -13,7 +13,7 @@ import java.util.List;
 public class MemberDAOJDBC implements MemberInterface{
 	
 	String driver = "com.microsoft.sqlserver.jdbc.SQLServerDriver";
-	String url = "jdbc:sqlserver://localhost:1433;DatabaseName=Sports";
+	String url = "jdbc:sqlserver://localhost:1433;DatabaseName=RunningLife";
 	String userid = "sa";
 	String passwd = "P@ssw0rd";
 	
@@ -86,7 +86,7 @@ public class MemberDAOJDBC implements MemberInterface{
 			pstmt.setString(17, menberVO.getIdentityID());
 			pstmt.setString(18, menberVO.getEmergencyContact());
 			pstmt.setString(19, menberVO.getEmergencyPhone());
-			pstmt.setInt(20, menberVO.getEmergencyRelation());
+			pstmt.setInt(20, menberVO.getEmergencyRelation().getRelationID());
 			pstmt.setString(21, menberVO.getCreateDate());
 			pstmt.setString(22, menberVO.getLastOnlineDateTime());
 

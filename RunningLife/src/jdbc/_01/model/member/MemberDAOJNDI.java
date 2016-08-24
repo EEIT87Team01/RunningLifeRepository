@@ -104,7 +104,7 @@ public class MemberDAOJNDI implements MemberInterface{
 			pstmt.setString(17, menberVO.getIdentityID());
 			pstmt.setString(18, menberVO.getEmergencyContact());
 			pstmt.setString(19, menberVO.getEmergencyPhone());
-			pstmt.setInt(20, menberVO.getEmergencyRelation());
+			pstmt.setInt(20, menberVO.getEmergencyRelation().getRelationID());
 			pstmt.setString(21, menberVO.getCreateDate());
 			pstmt.setString(22, menberVO.getLastOnlineDateTime());
 

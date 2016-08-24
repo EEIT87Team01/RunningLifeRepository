@@ -1,6 +1,9 @@
 package jdbc._01.model.member;
 
 import java.io.File;
+
+import jdbc._01.model.emergencyRelation.EmergencyRelationBean;
+import jdbc._01.model.emergencyRelation.EmergencyRelationDAOJDBC;
 //import java.io.FileInputStream;
 //import java.io.FileNotFoundException;
 //import java.io.InputStream;
@@ -9,13 +12,15 @@ public class MainMeneber {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-//		MemberDAOJDBC dao = new MemberDAOJDBC();
-		MemberDAOJNDI dao = new MemberDAOJNDI();
+		MemberDAOJDBC dao = new MemberDAOJDBC();
+//		MemberDAOJNDI dao = new MemberDAOJNDI();
+		EmergencyRelationDAOJDBC erdoa = new EmergencyRelationDAOJDBC();
 		
 		String photoName = "chngstar.gif";
 		File photo = new File("E:\\EEIT87-1P\\FinalProject\\images",photoName);
 		
 		MemberBean memberVO = new MemberBean();
+		EmergencyRelationBean erVO = new EmergencyRelationBean();
 		memberVO.setMemberID("665922CD-6039-4D69-B963-DC1B7B62EC99");
 		memberVO.setFirstName("Wang");
 		memberVO.setLastName("Jack");
@@ -35,7 +40,7 @@ public class MainMeneber {
 		memberVO.setIdentityID("A123456789");
 		memberVO.setEmergencyContact("God");
 		memberVO.setEmergencyPhone("0987987987");
-		memberVO.setEmergencyRelation(1);
+		erVO.setRelationID(1);
 		memberVO.setCreateDate("2016-08-16");
 		memberVO.setLastOnlineDateTime("2016-08-09 12:20:00.000");
 				

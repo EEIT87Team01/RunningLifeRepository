@@ -1,11 +1,13 @@
 package jdbc._01.model.location;
 
+import jdbc._01.model.member.MemberBean;
+
 public class LocationBean {
 //	SELECT TOP 1000 [locationID]
 //		      ,[cityID]
 //		      ,[countryID]
 //		      ,[locationName]
-	private String locationID;
+	private MemberBean locationID;
 	private String cityID;
 	private String countryID;
 	private String locationName;
@@ -13,17 +15,17 @@ public class LocationBean {
 	public LocationBean() {
 		
 	}
-	public LocationBean(String locationID, String cityID, String countryID, String locationName) {
+	public LocationBean(MemberBean locationID, String cityID, String countryID, String locationName) {
 		super();
 		this.locationID = locationID;
 		this.cityID = cityID;
 		this.countryID = countryID;
 		this.locationName = locationName;
 	}
-	public String getLocationID() {
+	public MemberBean getLocationID() {
 		return locationID;
 	}
-	public void setLocationID(String locationID) {
+	public void setLocationID(MemberBean locationID) {
 		this.locationID = locationID;
 	}
 	public String getCityID() {
