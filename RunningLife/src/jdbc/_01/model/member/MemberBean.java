@@ -85,11 +85,11 @@ public class MemberBean {
 		this.lastName = lastName;
 	}
 
-	public String getNickname() {
+	public String getNickName() {
 		return nickname;
 	}
 
-	public void setNickname(String nickname) {
+	public void setNickName(String nickname) {
 		this.nickname = nickname;
 	}
 

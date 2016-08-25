@@ -88,7 +88,7 @@ public class MemberDAOJNDI implements MemberInterface{
 			pstmt.setString(1, menberVO.getMemberID());
 			pstmt.setString(2, menberVO.getFirstName());
 			pstmt.setString(3, menberVO.getLastName());
-			pstmt.setString(4, menberVO.getNickname());
+			pstmt.setString(4, menberVO.getNickName());
 			pstmt.setString(5, menberVO.getEmail());
 			pstmt.setString(6, menberVO.getGender());
 			pstmt.setString(7, menberVO.getBirthday());

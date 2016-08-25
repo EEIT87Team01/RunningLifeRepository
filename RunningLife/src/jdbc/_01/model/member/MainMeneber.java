@@ -24,13 +24,13 @@ public class MainMeneber {
 		memberVO.setMemberID("665922CD-6039-4D69-B963-DC1B7B62EC99");
 		memberVO.setFirstName("Wang");
 		memberVO.setLastName("Jack");
-		memberVO.setNickname("KO");
+		memberVO.setNickName("KO");
 		memberVO.setEmail("jack123@gmail.com");
 		memberVO.setGender("1");
 		memberVO.setBirthday("2016-08-16");
-		memberVO.setCountryID("111");
+		memberVO.setCountryID("300");
 		memberVO.setCityID("222");
-		memberVO.setLocationID("321");
+		memberVO.setLocationID("777");
 		memberVO.setAddress("日本北海道札幌市");
 		memberVO.setHeight(123.0);
 		memberVO.setWeight(123.0);
@@ -40,7 +40,8 @@ public class MainMeneber {
 		memberVO.setIdentityID("A123456789");
 		memberVO.setEmergencyContact("God");
 		memberVO.setEmergencyPhone("0987987987");
-		erVO.setRelationID(1);
+		erVO.setRelationID(10);
+		memberVO.setEmergencyRelation(erVO);
 		memberVO.setCreateDate("2016-08-16");
 		memberVO.setLastOnlineDateTime("2016-08-09 12:20:00.000");
 				

@@ -1,5 +1,9 @@
 package jdbc._01.model.emergencyRelation;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
 import java.util.List;
 
 public class EmergencyRelationDAOJDBC implements EmergencyRelationInterface{
@@ -10,7 +14,7 @@ public class EmergencyRelationDAOJDBC implements EmergencyRelationInterface{
 	String passwd = "P@ssw0rd";
 	
 	private static final String INSERT_STMT =
-				"INSERT INTO emergencyRelation VALUES(?)";
+				"INSERT INTO emergencyRelation VALUES(?,?)";
 	
 	private static final String UPDATE_STMT =
 			"UPDATE emergencyRelation set "
@@ -25,8 +29,32 @@ public class EmergencyRelationDAOJDBC implements EmergencyRelationInterface{
 											 + "FROM emergencyRelation";
 	@Override
 	public int insert(EmergencyRelationBean emergencyRelationVO) {
-		// TODO Auto-generated method stub
-		return 0;
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		int result = 0;
+		
+		try {
+			conn = DriverManager.getConnection(url, userid, passwd);
+			pstmt = conn.prepareStatement(INSERT_STMT);
+			
+			pstmt.setInt(1, emergencyRelationVO.getRelationID());
+			pstmt.setString(1, emergencyRelationVO.getRelationName());
+			
+			result = pstmt.executeUpdate();
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} finally {
+			try {
+				pstmt.close();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+		
+		return result;
 	}
 
 	@Override
